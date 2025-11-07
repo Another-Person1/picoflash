@@ -1,10 +1,12 @@
 # pico⚡flash
 
-Use pico⚡flash to flash your Raspberry Pi Pico microcontroller directly from your web browser using WebUSB.
+Use [pico⚡flash](https://picoflash.org) to flash your Raspberry Pi Pico microcontroller directly from your web browser using WebUSB.
 
 Requires Chrome, Edge or another Chromium-based browser with WebUSB support.
 
 Works on Windows, macOS, Linux and Android.
+
+As well as a [website](https://picoflash.org) pico⚡flash is a full Javascript implementation of Raspberry Pi's PICOBOOT protocol, for flashing and managing RP2040 and RP2350 microcontrollers over USB.
 
 ## Features
 
