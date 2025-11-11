@@ -916,8 +916,13 @@ async function connect() {
     } catch (error) {
         if (error.message.includes('cancelled')) {
             updateStatus('No device');
+            logActivity('Device selection cancelled', 'info');
+        } else if (error.message.includes('not supported') && error.message.includes('browser')) {
+            updateStatus('Browser not supported');
+            logActivity('Error: Browser does not support WebUSB', 'error');
         } else {
             updateStatus('Connect error');
+            logActivity(`Error: ${error.message}`, 'error');
         }
         return;
     }
