@@ -8,24 +8,16 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 
     <!-- SEO title & description -->
-    <title>pico⚡flash</title>
-    <meta name="description" content="Lightning fast Pico flashing from your browser">
-    <link rel="canonical" href="https://picoflash.org/" />
-
-    <!-- Open Graph for social media -->
-    <meta property="og:url" content="https://picoflash.org/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="pico⚡flash">
-    <meta property="og:description" content="Lightning fast Pico flashing from your browser">
-    <meta property="og:image" content="images/picoflash%20image%20social.png">
+    <title>pico⚡flash desktop</title>
+    <meta name="description" content="Lightning fast Pico flashing from a desktop app. Flash .uf2 and .bin files, read/write/erase flash and RAM, OTP operations, and more.">
 
 </head>
 
 <body>
     <div class="container">
         <header class="header">
-            <h1>pico⚡flash</h1>
-            <p class="subtitle">Lightning fast Pico flashing from your browser</p>
+            <h1>pico⚡flash desktop</h1>
+            <p class="subtitle">Lightning fast, easy, and simple Pico flashing from a desktop app.</p>
         </header>
 
         <br>
@@ -33,9 +25,7 @@
         <section class="connection">
             <div class="connection-row">
                 <div class="connection-controls">
-                    <button id="chooseDeviceBtn" class="btn btn-secondary" data-tooltip="Choose which USB device source to use">Choose Device</button>
-                    <span id="selectedDeviceLabel" class="selected-device-label">Source: System picker</span>
-                    <button id="refreshDevicesBtn" class="btn btn-primary" data-tooltip="Refresh paired USB devices">Refresh Devices</button>
+                    <button id="chooseDeviceBtn" class="btn btn-secondary" data-tooltip="Choose a USB device using the system picker">Choose Device</button>
                     <button id="connectBtn" class="btn btn-primary" data-tooltip="Connect to an RP-based device">Connect</button>
                 </div>
             </div>
@@ -238,39 +228,25 @@
             </div>
         </div>
 
-        <div id="devicePickerModal" class="modal hidden">
-            <div class="modal-content device-picker-modal-content">
+        <div id="deviceChooserPopup" class="modal hidden">
+            <div class="modal-content device-chooser-content">
                 <div class="modal-header">
-                    <h3>Choose USB Device Source</h3>
-                    <button class="modal-close" id="closeDevicePickerModal">&times;</button>
+                    <h3>Choose Device</h3>
+                    <button class="modal-close" id="closeDeviceChooserBtn">&times;</button>
                 </div>
-                <div class="device-picker-modal-body">
-                    <p class="device-picker-help">Pick a paired device for quick reconnect, or use the system picker.</p>
-                    <div id="devicePickerList" class="device-picker-list"></div>
+                <div class="device-chooser-body">
+                    <p class="device-chooser-help">Select a paired device, or continue to open the USB chooser.</p>
+                    <div id="deviceChooserList" class="device-chooser-list"></div>
                 </div>
                 <div class="modal-footer">
-                    <button id="refreshDevicePickerModalBtn" class="btn btn-secondary">Refresh</button>
-                    <button id="useSystemPickerBtn" class="btn btn-secondary">Use System Picker</button>
-                    <button id="cancelDevicePickerBtn" class="btn btn-secondary">Cancel</button>
-                    <button id="confirmDevicePickerBtn" class="btn btn-primary">Use Selection</button>
+                    <button id="refreshDeviceChooserBtn" class="btn btn-secondary">Refresh</button>
+                    <button id="cancelDeviceChooserBtn" class="btn btn-secondary">Cancel</button>
+                    <button id="confirmDeviceChooserBtn" class="btn btn-primary">Use Selection</button>
                 </div>
             </div>
         </div>
 
         <br>
-
-        <div id="links" class="hr">
-            <h3>Links</h3>
-            <div class="links">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="var(--color-text-primary)">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                <a href="https://github.com/piersfinlayson/picoflash" target="_blank">GitHub Repository</a>
-                <span>pico⚡flash source code (MIT licensed)</span>
-
-            </div>
-
-        </div>
 
         <div id="footer"></div>
     </div>
@@ -279,5 +255,7 @@
 <script src="js/site/footer.js"></script>
 
 <script type="module" src="js/flash/picoflash.js"></script>
+
+<footer>Based on <a href="https://github.com/piersfinlayson/picoflash" target="_blank" rel="noopener noreferrer">pico⚡flash</a> by Piers Finlayson</footer>
 
 </html>

@@ -41,6 +41,7 @@ async function createWindow() {
     height: 900,
     minWidth: 900,
     minHeight: 700,
+    autoHideMenuBar: true,
     icon: path.join(projectRoot, 'favicon.ico'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -52,6 +53,7 @@ async function createWindow() {
   });
 
   const session = window.webContents.session;
+  window.setMenuBarVisibility(false);
 
   session.webRequest.onBeforeRequest((details, callback) => {
     callback({ cancel: !isAllowedRequest(details.url) });
