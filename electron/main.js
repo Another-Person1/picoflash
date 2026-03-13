@@ -41,6 +41,8 @@ async function createWindow() {
     height: 900,
     minWidth: 900,
     minHeight: 700,
+    frame: true,
+    titleBarStyle: 'default',
     autoHideMenuBar: true,
     icon: path.join(projectRoot, 'favicon.ico'),
     webPreferences: {
